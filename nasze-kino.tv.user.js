@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         nasze-kino.tv
 // @namespace    nasze-kino.tv
-// @version      0.3
+// @version      0.4
 // @description  tools for nasze-kino.tv
 // @author       miszel
 // @match        https://www.nasze-kino.tv/*
@@ -17,7 +17,7 @@
     };
 
     window.onload = function () {
-        document.getElementById('input-captcha').oninput = function(){this.value = this.value.toUpperCase()};
+        if (document.getElementById('input-captcha')) document.getElementById('input-captcha').oninput = function(){this.value = this.value.toUpperCase()};
         onResize();
     };
 
