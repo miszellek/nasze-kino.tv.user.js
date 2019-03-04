@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         nasze-kino.tv
 // @namespace    nasze-kino.tv
-// @version      0.1
+// @version      0.2
 // @description  tools for nasze-kino.tv
 // @author       miszel
 // @match        https://www.nasze-kino.tv/*
@@ -35,6 +35,8 @@
             }
 
             document.querySelectorAll('div.captcha-info div.input-group-addon img')[0].style.width = '240px';
+            document.querySelectorAll('div.captcha-info div.input-group-btn button')[0].style.borderRadius = '0';
+            document.querySelectorAll('div.captcha-info div.input-group-btn button')[0].style.marginLeft = '0';
         } else {
             document.getElementById('single-poster').style.marginTop = null;
 
@@ -46,6 +48,8 @@
             }
 
             document.querySelectorAll('div.captcha-info div.input-group-addon img')[0].style.width = null;
+            document.querySelectorAll('div.captcha-info div.input-group-btn button')[0].style.borderRadius = null;
+            document.querySelectorAll('div.captcha-info div.input-group-btn button')[0].style.marginLeft = null;
         }
     }
 
